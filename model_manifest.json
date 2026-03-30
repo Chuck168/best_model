@@ -9,5 +9,5 @@
     "OK": 350
   },
   "val_acc": 1.0,
-  "description": "MobileNetV2, color-aware IC crop, edge enhancement"
+  "preprocessing": "color_aware_crop + edge_enhance"
 }
