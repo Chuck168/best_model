@@ -1,13 +1,18 @@
 {
-  "version": "v3",
-  "filename": "best_model_v3.pth",
-  "url": "https://raw.githubusercontent.com/Chuck168/best_model/main/best_model_v3.pth",
-  "md5": "a954e1d69fa0cb719ca6fedbe9d65438",
-  "trained": "2026-03-30",
-  "dataset": {
-    "NG": 23,
-    "OK": 350
-  },
-  "val_acc": 1.0,
-  "preprocessing": "color_aware_crop + edge_enhance"
+  "latest": "v3",
+  "models": [
+    {
+      "version": "v3",
+      "label": "v3 \u2014 NG:23 OK:350 (2026-03-30)",
+      "filename": "best_model_v3.pth",
+      "url": "https://raw.githubusercontent.com/Chuck168/best_model/main/best_model_v3.pth",
+      "md5": "a954e1d69fa0cb719ca6fedbe9d65438",
+      "trained": "2026-03-30",
+      "dataset": {
+        "NG": 23,
+        "OK": 350
+      },
+      "val_acc": 1.0
+    }
+  ]
 }
