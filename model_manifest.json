@@ -1,9 +1,27 @@
 {
-  "latest": "v3",
+  "latest": "v4.1",
   "models": [
     {
+      "version": "v4.1",
+      "label": "v4.1 \u2014 Focal(\u03b3=1) + 256px + No Erasing (2026-03-31) NG:91.3% OK:100%",
+      "filename": "best_model_v4_1.pth",
+      "url": "https://raw.githubusercontent.com/Chuck168/best_model/main/best_model_v4_1.pth",
+      "md5": "bd70826b667434f16430b16ac5f17498",
+      "trained": "2026-03-31",
+      "dataset": {
+        "NG": 23,
+        "OK": 350
+      },
+      "val_acc": 1.0,
+      "full_acc": {
+        "NG": 0.913,
+        "OK": 1.0
+      },
+      "img_size": 256
+    },
+    {
       "version": "v3",
-      "label": "v3 \u2014 NG:23 OK:350 (2026-03-30)",
+      "label": "v3 \u2014 MobileNetV2 baseline (2026-03-30)",
       "filename": "best_model_v3.pth",
       "url": "https://raw.githubusercontent.com/Chuck168/best_model/main/best_model_v3.pth",
       "md5": "a954e1d69fa0cb719ca6fedbe9d65438",
