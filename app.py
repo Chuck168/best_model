@@ -119,13 +119,16 @@ def load_model(model_path: str = None, version_label: str = "v5"):
     device = torch.device('mps' if torch.backends.mps.is_available() else 'cpu')
     path = Path(model_path) if model_path else MODEL_PATH
     
-    # Check which model architecture to use based on the version
-    if "v5" in str(version_label).lower() or "resnet" in str(version_label).lower():
+    # Use ResNet18 ONLY for v5. All other versions (including local dev versions without name) are MobileNetV2
+    # But wait, our local model is named "best_model_v5.pth". So let's check the filename too!
+    
+    is_v5 = "v5" in str(version_label).lower() or "v5" in str(path).lower()
+    
+    if is_v5:
         m = models.resnet18(weights=None)
         num_ftrs = m.fc.in_features
         m.fc = nn.Linear(num_ftrs, 2)
     else:
-        # V3, V4, V4.1 use MobileNetV2
         m = models.mobilenet_v2(weights=None)
         m.classifier[1] = nn.Linear(m.last_channel, 2)
         
